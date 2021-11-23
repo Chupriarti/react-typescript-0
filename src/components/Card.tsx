@@ -7,7 +7,7 @@ interface CardPros {
 
 const Card = ({width, height}: CardPros) => {
   return (
-    <div>
+    <div style={{backgroundColor: "silver"}}>
       
     </div>
   );
