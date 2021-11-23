@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Card = () => {
+interface CardPros {
+    width: string;
+    height: string;
+}
+
+const Card = ({width, height}: CardPros) => {
   return (
     <div>
       
