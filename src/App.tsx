@@ -17,8 +17,8 @@ function App() {
         onClick={(num) => console.log("Hola!", num)}
       >
         <button>Button</button>
-        <UserList users={users}/>
       </Card>
+      <UserList users={users}/>
     </div>
   );
 }
