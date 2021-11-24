@@ -8,7 +8,7 @@ function App() {
         width="200px" 
         height="300px"
         variant = {CardVariant.outlined}
-        onClick={() => console.log("Hola!")}
+        onClick={(num) => console.log("Hola!", num)}
       >
         <button>Button</button>
       </Card>

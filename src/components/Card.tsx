@@ -9,7 +9,7 @@ interface CardProps {
     width: string;
     height: string;
     variant?: CardVariant
-    onClick?: () => void;
+    onClick: (num: number) => void;
 }
 
 const Card: FC<CardProps> = 
@@ -20,11 +20,12 @@ const Card: FC<CardProps> =
     variant,
     onClick
   }) => {
+  const [state, setState] = React.useState(0);
   return (
     <div style={{width, height, 
       border: variant === CardVariant.outlined ? "1px solid black" : "",
       background: variant === CardVariant.primary ? "silver" : ""}}
-      onClick={onClick}
+      onClick={() => onClick(state)}
     >
       {children}
     </div>
