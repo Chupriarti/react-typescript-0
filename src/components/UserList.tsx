@@ -1,6 +1,11 @@
 import React, {FC} from 'react';
+import { IUser } from '../types/types';
 
-const UserList: FC = () => {
+interface UserListProps {
+    users: IUser[];
+}
+
+const UserList: FC<UserListProps> = ({users}) => {
     return (
         <div>
 
