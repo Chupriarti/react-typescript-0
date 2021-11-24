@@ -1,10 +1,15 @@
 import React from 'react';
-import Card from './components/Card';
+import Card, { CardVariant } from './components/Card';
 
 function App() {
   return (
     <div>
-      <Card width="200px" height="300px">
+      <Card 
+        width="200px" 
+        height="300px"
+        variant = {CardVariant.outlined}
+        onClick={(num) => console.log("Hola!", num)}
+      >
         <button>Button</button>
       </Card>
     </div>
