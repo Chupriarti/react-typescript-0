@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 interface CardProps {
     width: string;
     height: string;
 }
 
-const Card: React.FC<CardProps> = ({width, height, children}) => {
+const Card: FC<CardProps> = 
+  ({
+    width, 
+    height, 
+    children
+  }) => {
   return (
     <div style={{width, height, backgroundColor: "silver"}}>
       {children}
