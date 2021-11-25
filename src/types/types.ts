@@ -5,7 +5,7 @@ export interface IAddress {
 }
 
 export interface IUser {
-    id: string;
+    id: number;
     name: string;
     email: string;
     address: IAddress;
