@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import Card, { CardVariant } from './components/Card';
 import List from './components/List';
+import TodoItem from './components/TodoItem';
 import UserItem from './components/UserItem';
 import { ITodo, IUser } from './types/types';
 
@@ -45,6 +46,10 @@ function App() {
       <List 
         items={users}
         renderItem={(user: IUser) => <UserItem key={user.id} user={user} />} 
+      />
+      <List 
+        items={todos}
+        renderItem={(todo: ITodo) => <TodoItem key={todo.id} todo={todo} />} 
       />
     </div>
   );
