@@ -11,11 +11,15 @@ const EventsExample: FC = () => {
         console.log(value)
     }
 
+    const dragHandler = (e: React.DragEvent<HTMLDivElement>) => {
+        console.log("starting drag...")
+    }
+
     return (
         <div>
             <input value={value} onChange={changeHandler} type="text" />
             <button onClick={clickHandler}>Press Me!</button>
-            <div draggable style={{width: 200, height: 200, background: "red"}}></div>
+            <div onDrag={dragHandler} draggable style={{width: 200, height: 200, background: "red"}}></div>
             <div style={{width: 200, height: 200, background: "red", marginTop: 15}}></div>
         </div>
     )
