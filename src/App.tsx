@@ -36,6 +36,7 @@ function App() {
 
   return (
     <div>
+      <EventsExample />
       <Card 
         width="200px" 
         height="300px"
@@ -52,7 +53,7 @@ function App() {
         items={todos}
         renderItem={(todo: ITodo) => <TodoItem key={todo.id} todo={todo} />} 
       />
-      <EventsExample />
+      
     </div>
   );
 }

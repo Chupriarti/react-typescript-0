@@ -14,7 +14,7 @@ const EventsExample: FC = () => {
     return (
         <div>
             <input value={value} onChange={changeHandler} type="text" />
-            <button onClick={clickHandler}></button>
+            <button onClick={clickHandler}>Press Me!</button>
         </div>
     )
 }
