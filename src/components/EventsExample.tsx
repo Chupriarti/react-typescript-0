@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 
 const EventsExample: FC = () => {
     const [value, setValue] = React.useState<string>("");
+    const [isDrag, setIsDrag] = React.useState<boolean>(false)
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setValue(e.target.value);
@@ -16,16 +17,19 @@ const EventsExample: FC = () => {
     }
 
     const dropHandler = (e: React.DragEvent<HTMLDivElement>) => {
-        console.log("dropping")
+        e.preventDefault();
+        setIsDrag(false);
+        console.log("dropped")
     }
 
     const dragLeave = (e: React.DragEvent<HTMLDivElement>) => {
-        console.log("leaving")
+        e.preventDefault();
+        setIsDrag(false);
     }
 
     const dragWithPreventHandler = (e: React.DragEvent<HTMLDivElement>) => {
         e.preventDefault();
-        console.log("dragging over")
+        setIsDrag(true);
     }
 
     return (
