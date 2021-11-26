@@ -9,3 +9,5 @@ const EventsExample: FC = () => {
         </div>
     )
 }
+
+export default EventsExample;

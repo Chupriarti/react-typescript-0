@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import Card, { CardVariant } from './components/Card';
+import EventsExample from './components/EventsExample';
 import List from './components/List';
 import TodoItem from './components/TodoItem';
 import UserItem from './components/UserItem';
@@ -51,6 +52,7 @@ function App() {
         items={todos}
         renderItem={(todo: ITodo) => <TodoItem key={todo.id} todo={todo} />} 
       />
+      <EventsExample />
     </div>
   );
 }
