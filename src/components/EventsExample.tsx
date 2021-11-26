@@ -23,7 +23,8 @@ const EventsExample: FC = () => {
         console.log("leaving")
     }
 
-    const dragOver = (e: React.DragEvent<HTMLDivElement>) => {
+    const dragWithPreventHandler = (e: React.DragEvent<HTMLDivElement>) => {
+        e.preventDefault();
         console.log("dragging over")
     }
 
@@ -35,7 +36,7 @@ const EventsExample: FC = () => {
             <div 
                 onDrop={dropHandler} 
                 onDragLeave={dragLeave} 
-                onDragOver={dragOver} 
+                onDragOver={dragWithPreventHandler} 
                 style={{width: 200, height: 200, background: "red", marginTop: 15}}></div>
         </div>
     )
