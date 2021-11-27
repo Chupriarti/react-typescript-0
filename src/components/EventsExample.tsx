@@ -10,7 +10,7 @@ const EventsExample: FC = () => {
     }
 
     const clickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-        console.log(value)
+        console.log(inputRef.current?.value)
     }
 
     const dragHandler = (e: React.DragEvent<HTMLDivElement>) => {
