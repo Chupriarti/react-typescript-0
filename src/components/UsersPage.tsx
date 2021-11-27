@@ -4,7 +4,7 @@ import { IUser } from '../types/types';
 import List from './List';
 import UserItem from './UserItem';
 
-const UserPage: FC = () => {
+const UsersPage: FC = () => {
 
     const [users, setUsers] = React.useState<IUser[]>([])
   
@@ -31,4 +31,4 @@ const UserPage: FC = () => {
     )
 }
 
-export default UserPage;
+export default UsersPage;
